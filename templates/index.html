@@ -6,27 +6,29 @@
     <form action="" method="POST">
         <div class="col mb-3">
         <label for="first_currency">Chose first currency: </label>
-        <select name="first_currency" id="" class="first_currency">
+        <select name="first_currency" id="" class="first_currency" required>
             <option value="PLN">🇵🇱 PLN-Polish zloty</option>
             <option value="EUR">🇪🇺 EUR-Euro</option>
             <option value="USD">🇺🇸 USD-US Dollar</option>
             <option value="GBP">🇬🇧 GBP-British pound</option>
+            <option value="RUB" disabled>🇷🇺 RUB-Russia Ruble</option>
         </select>
     </div>
     <div class="col mb-3">
         <label for="money">How much: </label>
-        <input type="number" name="money" id="" step="0.01" value="1">
+        <input type="number" name="money" id="" step="0.01" value="1" required min="0.01" > 
     </div>
     <div class="col mb-3">
         <label for="second_currency">Chose second currency: </label>
-        <select name="second_currency" id="" class="second_currency">
+        <select name="second_currency" id="" class="second_currency" required>
             <option value="EUR">🇪🇺 EUR-Euro</option>
             <option value="PLN">🇵🇱 PLN-Polish zloty</option>
             <option value="USD">🇺🇸 USD-US Dollar</option>
             <option value="GBP">🇬🇧 GBP-British pound</option>
+            <option value="RUB" disabled>🇷🇺 RUB-Russia Ruble</option>
         </select>
     </div>
-        <button class="btn btn-primary">Check</button>
+        <button class="btn btn-primary w-100">Check</button>
     </form>
     </div>
 </div>

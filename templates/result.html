@@ -1,3 +1,11 @@
 {% extends 'base.html' %}
 {% block main %}
+<div class="card mb-3">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><p class="text-center"> {{flag_a}}  for{{flag_b}}</p><p class="text-center">{{money}} {{first_currency}} for {{second_currency}} {{result}}</p></li>
+    </ul>
+  </div>
+  <div>
+    <a href="/" class="text-light"><button class="btn btn-primary w-100">Go back</button></a>
+</div>
 {% endblock %}
