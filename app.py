@@ -19,6 +19,14 @@ def select_flag(currency_a):
         a = "🇬🇧"
     elif currency_a=="RUB":
         a = "🇷🇺"
+    elif currency_a=="CAD":
+        a = "🇨🇦"
+    elif currency_a=="CNY":
+        a = "🇨🇳"
+    elif currency_a=="CHF":
+        a = "🇨🇭"
+    elif currency_a=="JPY":
+        a = "🇯🇵"
     return a
 @app.route('/', methods=['GET', 'POST'])
 def index():
