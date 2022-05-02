@@ -1,4 +1,30 @@
 {% extends 'base.html' %}
 {% block main %}
-<h1 class="text-center">Currency Converter</h1>
+{{zlotowka}}
+<div class="row">
+    <h2 class="text-center mb-5"></h2>
+    <div class="col-6 offset-3">
+    <form action="" method="POST">
+        <div class="col mb-3">
+        <label for="first_currency">Chose first currency: </label>
+        <select name="first_currency" id="" class="first_currency">
+            <option value="PLN">🇵🇱 PLN-Polish zloty</option>
+            <option value="EUR">🇪🇺 EUR-Euro</option>
+            <option value="USD">🇺🇸 USD-US Dollar</option>
+            <option value="GBP">🇬🇧 GBP-British pound</option>
+        </select>
+    </div>
+    <div class="col mb-3">
+        <label for="second_currency">Chose second currency: </label>
+        <select name="second_currency" id="" class="second_currency">
+            <option value="EUR">🇪🇺 EUR-Euro</option>
+            <option value="PLN">🇵🇱 PLN-Polish zloty</option>
+            <option value="USD">🇺🇸 USD-US Dollar</option>
+            <option value="GBP">🇬🇧 GBP-British pound</option>
+        </select>
+    </div>
+        <button class="btn btn-primary">Check</button>
+    </form>
+    </div>
+</div>
 {% endblock %}
