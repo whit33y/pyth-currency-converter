@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request
 import requests
+import datetime
 from forex_python.converter import CurrencyRates
 c = CurrencyRates()
 
@@ -27,6 +28,18 @@ def select_flag(currency_a):
         a = "🇨🇭"
     elif currency_a=="JPY":
         a = "🇯🇵"
+    elif currency_a=="DKK":
+        a = "🇩🇰"
+    elif currency_a=="SEK":
+        a = "🇸🇪"
+    elif currency_a=="IDR":
+        a = "🇮🇩"
+    elif currency_a=="INR":
+        a = "🇮🇳"
+    elif currency_a=="MXN":
+        a = "🇲🇽"
+    elif currency_a=="CZK":
+        a = "🇨🇿"
     return a
 @app.route('/', methods=['GET', 'POST'])
 def index():
