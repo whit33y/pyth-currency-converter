@@ -2,13 +2,12 @@
 {% block main %}
 <div class="card mb-3">
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><p class="text-center">On: {% if selected_date: %}{{selected_date}}{%else%}{{time_now}}{%endif%}</p><p class="text-center"> {{flag_a}}  for{{flag_b}}</p><p class="text-center">{{money}} {{first_currency}} for {{result}} {{second_currency}}</p></li>
+      <li class="list-group-item"><p class="text-center">On: {{time_now}}</p><p class="text-center"> {{flag_a}}  for{{flag_b}}</p><p class="text-center">{{money}} {{first_currency}} for {{result}} {{second_currency}}</p></li>
     </ul>
   </div>
   <div>
     <a href="/" class="text-light"><button class="btn btn-primary w-100">Go back</button></a>
 </div>
 <div>
-<p class="text-center">{{time_now}}</p>
 </div>  
 {% endblock %}
