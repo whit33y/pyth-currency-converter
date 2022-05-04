@@ -46,13 +46,14 @@ def index():
     if request.method == 'POST':
         first_currency = request.form.get('first_currency')
         second_currency = request.form.get('second_currency')
+        selected_date = request.form.get('date')
         date_now = datetime.datetime.now()
         time_now = date_now.strftime("%d/%m/%Y %H:%M:%S")
         money = float(request.form.get('money'))
         flag_a = select_flag(first_currency)
         flag_b = select_flag(second_currency)
         result = round(change_currency(first_currency, second_currency, money),4)
-        return render_template('result.html', money=money, first_currency=first_currency, second_currency=second_currency, result=result, flag_a=flag_a, flag_b=flag_b, time_now=time_now)
+        return render_template('result.html', selected_date=selected_date, money=money, first_currency=first_currency, second_currency=second_currency, result=result, flag_a=flag_a, flag_b=flag_b, time_now=time_now)
     return render_template('index.html')
 
 @app.errorhandler(404)
